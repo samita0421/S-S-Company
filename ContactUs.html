@@ -13,7 +13,7 @@
 
   <title>S & S Co.</title>
 </head>
-
+<link rel="stylesheet" type="text/css" href="home.css">
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#">S & S Co.</a>
@@ -25,10 +25,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link" href="https://samita0421.github.io/S-S-Company/Home.html">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item ">
-          <a class="nav-link" href="https://samita0421.github.io/S-S-Company/career.html">Career</a>
+          <a class="nav-link" href="career.html">Career</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -36,17 +36,17 @@
             Products
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Adhesive</a>
-            <a class="dropdown-item" href="#">Fluids</a>
-            <a class="dropdown-item" href="#">Gels</a>
-            <a class="dropdown-item" href="#">Solvents</a>
+            <a class="dropdown-item" href="Products.html">Adhesive</a>
+            <a class="dropdown-item" href="Products.html">Fluids</a>
+            <a class="dropdown-item" href="Products.html">Gels</a>
+            <a class="dropdown-item" href="Products.html">Solvents</a>
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://samita0421.github.io/S-S-Company/SDS.html">SDS</a>
+          <a class="nav-link" href="SDS.html">SDS</a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="https://samita0421.github.io/S-S-Company/ContactUs.html">Contact Us</a>
+          <a class="nav-link" href="ContactUs.html">Contact Us</a>
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
@@ -55,46 +55,197 @@
       </form>
     </div>
   </nav>
-  <div class="container">
-  <form>
-    <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-    </div>
-    <div class="container">
-    <div>
-    <select class="form-select" aria-label="Default select example">
-      <option selected>Request</option>
-      <option value="1">Safety Data Sheet</option>
-      <option value="2">Product Data Sheet</option>
-      <option value="3">Information Sheet</option>
-      <option value="4">other</option>
-    </select>
-  </div>
-</div>
-<div class="mb-3">
-  <label for="exampleFormControlTextarea1" class="form-label">Write What You Want</label>
-  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-</div>
-    <div class="mb-3 form-check">
-      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-      <label class="form-check-label" for="exampleCheck1">I am not a Robot</label>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
-</div>
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-    crossorigin="anonymous"></script>
-</body>
+    <style>
+        body{
+            padding: 25px 50px;
+        }
+        .formdesign{
+           font-size: 20px; 
+        }
+        .formdesign input{
+           width: 20%;
+           padding: 5px 8px; 
+           border: 2px solid rgb(22, 14, 29);
+           margin: 14px;
+           border-radius: 10px;
+           font-size: 12px;
+        }
+        .formerror{
+            color: red;
+        }
+        .but{
+            border-radius: 5px;
+            width: 80px;
+            height: 30px;
+            font-size: 15px;
+            margin: 22px 10px;
 
+        }
+    </style>
+</head>
+   <h4 style="padding: 15px; background-color: rgb(196, 207, 255);" align="middle" ><b style="color: brown; font-size:larger;" >Register</b> to access product information</h4>
+
+   <div class="card">
+
+    <div class="form_content">
+
+   <form action="https://api.web3forms.com/submit" name="myForm" onsubmit="return validateform()" method="post">
+    <input type="hidden" name="access_key" value="8f286511-2701-4cd0-b3cd-398f88235deb">
+    <div class="formdesign" id="name">
+         Name:   <input type="text" name="fname" required><b><span class="formerror"></span></b>
+   </div>
+   <div class="formdesign" id="Email">
+         Email: <input type="email" name="femail" required><b><span class="formerror"></span></b>
+   </div>
+   <div class="formdesign" id="Phone">
+        Phone: <input type="phone" name="fphone" required><b><span class="formerror"></span></b>
+   </div>
+   <div class="formdesign" id="pass">
+         Password: <input type="password" name="fpass" required><b><span class="formerror"></span></b>
+   </div>
+   <div class="formdesign" id="cpass">
+         Confirm Password: <input type="password" name="fcpass" required><b><span class="formerror"></span></b>
+   </div>
+   <br>
+   <div class="h-captcha" data-captcha="true"></div>
+   <input  class="but" type="Submit" value="Submit">
+   </form> 
+   </div>
+  </div>
+</body>
+<script src="https://web3forms.com/client/script.js" async defer></script>
+<script>
+    function seterror(id,error){
+        element = document.getElementById(id);
+        element.getElementsByClassName('formerror')[0].innerHTML = error;
+    }
+
+    function validateform(){
+        var returnval = true;
+
+        var name = document.forms['myForm']["fname"].value;
+        if (name.length<5){
+            seterror("name","*Length of name is too short");
+            returnval = false;
+        }
+        var email = document.forms['myForm']["femail"].value;
+        if (email.length>20){
+            seterror("Email","*Email Length is too long");
+            returnval = false;
+        }
+        var phone = document.forms['myForm']["fphone"].value;
+        if (phone.length!=10){
+            seterror("Phone","*Not a valid phone no.");
+            returnval = false;
+        }
+        var password = document.forms['myForm']["fpass"].value;
+        if (password.length<6){
+            seterror("pass","*password should be atleast 6 characters long");
+            returnval = false;
+        }
+
+        var confirmPassword = document.forms['myForm']["fcpass"].value;
+        if (password !== confirmPassword) {
+            seterror("cpass", "*Password and confirm password do not match");
+            returnval = false;
+        }
+        
+        
+     return returnval;
+    }
+</script>
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-body-tertiary text-muted">
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+   
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="" style="background-color: rgba(186, 196, 199, 0.452); padding-top: 5px;">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3" >
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3"></i>S & S Co.
+          </h6>
+          <p>
+            All Type of Chemical Substances You Need
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Products
+          </h6>
+          <p>
+            <a href="Products.html" class="text-reset">Adhesive</a>
+          </p>
+          <p>
+            <a href="Products.html" class="text-reset">Fluids</a>
+          </p>
+          <p>
+            <a href="Products.html" class="text-reset">Gels</a>
+          </p>
+          <p>
+            <a href="Products.html" class="text-reset">Solvents</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Others
+          </h6>
+          <p>
+            <a href="home.html" class="text-reset">Home</a>
+          </p>
+          <p>
+            <a href="career.html" class="text-reset">Career</a>
+          </p>
+          <p>
+            <a href="SDS.html" class="text-reset">SDS</a>
+          </p>
+          <p>
+            <a href="ContactUs.html" class="text-reset">Help</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+          <p><i class="fas fa-home me-3"></i>New Town, kol 700156, India</p>
+          <p>
+            <i class="fas fa-envelope me-3"></i>
+            samitaghosh.elogix@gmail.com
+          </p>
+          <p><i class="fas fa-phone me-3"></i> + 91 1234567892</p>
+          <p><i class="fas fa-print me-3"></i> + 91 1234567890</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(56, 61, 61, 0.05);">
+    © 2024 Copyright:
+    <a class="text-reset fw-bold" href="home.html">S&S.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
 </html>
